@@ -1,0 +1,52 @@
+###Service document
+http://localhost:4004/odata/v4/CatalogService/
+
+###Service metadata document
+http://localhost:4004/odata/v4/CatalogService/$metadata
+###Service employee data
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+###Service single employee data
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C197A7FB
+
+###Service to get the count
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/$count
+
+###Pagination
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$top=2&$skip=2
+
+###Filter
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$filter=bankName eq 'My Bank of San Francisco'
+
+###to insert data using POST call
+POST http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+Content-Type: application/json
+
+{
+    
+            "nameFirst": "Virat",
+            "nameLast": "Kohli",
+            "nameInitials": null,
+            "sex": "M",
+            "language": "E",
+            "phoneNumber": null,
+            "email": "virat@ey.co.in",
+            "loginName": "FALLF",
+            "Currency_code": "USD",
+            "salaryAmount": 85962,
+            "accountNumber": "8877665544",
+            "bankId": "12100032",
+            "bankName": "My Bank of San Francisco"
+}
+
+###get purchase order
+
+http://localhost:4004/odata/v4/CatalogService/POs
+
+###get largest order
+
+http://localhost:4004/odata/v4/CatalogService/getLargestOrder()
+
+###read random entity
+
+http://localhost:4004/odata/v4/MyService/ReadEmployeeSrv
+
